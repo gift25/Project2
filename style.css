@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .contanier{
-    width: 100;
+    width: 100;  
     display: flex;
 }
 .contanier .div-form{
@@ -30,7 +30,8 @@ form .inp{
     height: 60px;
     margin-bottom: 30px;
     border-radius: 50px;
-    box-shadow: 20px 20px 20px #8e1df720,-10px -10px 20px #8e1df720;
+    box-shadow: 20px 20px 20px #8e1df720,
+    -10px -10px 20px #8e1df720;
     position: relative;
 }
 form .inp input{
@@ -69,7 +70,7 @@ form .check1 span{
     color:#555555;
     font-size: 13px;
 }
-form .check2 span{
+form .check span{
     margin-top: 4px;
     color:#555555;
     font-size: 13px;
