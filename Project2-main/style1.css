@@ -85,7 +85,7 @@ body
 {
     box-shadow: 0 0 0 400px #d694df;
 }
-/* .contanier .box:nth-child(4) .icon
+.contanier .box:nth-child(4) .icon
 {
     box-shadow: 0 0 0 0 #d694df;
     background-color: #d694df;
@@ -93,7 +93,7 @@ body
 .contanier .box:nth-child(4):hover .icon
 {
     box-shadow: 0 0 0 400px #d694df;
-} */
+}
 .contanier .box .content
 {
     position: relative;
