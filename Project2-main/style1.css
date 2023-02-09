@@ -12,8 +12,9 @@ body
 .contanier
 {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position:sticky;
 }
 .contanier .box
 {
@@ -60,6 +61,7 @@ body
 {
     box-shadow: 0 0 0 0 #ec82a6;
     background-color: #ec82a6;
+
 }
 .contanier .box:nth-child(1):hover .icon
 {
@@ -83,6 +85,15 @@ body
 {
     box-shadow: 0 0 0 400px #d694df;
 }
+/* .contanier .box:nth-child(4) .icon
+{
+    box-shadow: 0 0 0 0 #d694df;
+    background-color: #d694df;
+}
+.contanier .box:nth-child(4):hover .icon
+{
+    box-shadow: 0 0 0 400px #d694df;
+} */
 .contanier .box .content
 {
     position: relative;

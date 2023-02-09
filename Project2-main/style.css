@@ -24,26 +24,27 @@
     flex-direction: column;
     width: 100%;
 }
-form .inp{
+form .textbox{
     width: 60px;
     margin: auto;
     height: 60px;
     margin-bottom: 30px;
     border-radius: 50px;
-    box-shadow: 20px 20px 20px #8e1df720,
-    -10px -10px 20px #8e1df720;
     position: relative;
 }
-form .inp input{
-    width: 100%;
-    height: 100%;
+form .textbox input{
+    width: 300px;
+    height: 50px;
     border-radius: 50px;
     outline: none;
     border: none;
     padding: 20px 70px;
     font-size: 18px;
+    justify-content: center;
+    box-shadow: 20px 20px 20px #8e1df720,
+    -10px -10px 20px #8e1df720;
 }
-form .inp i{
+form .textbox i{
     position: absolute;
     color: #8e1df7;
     font-size: 30px;
@@ -51,7 +52,7 @@ form .inp i{
     left: 20px;
     transform: translateY(-50%);
 }
-form .inp .eyes{
+form .textbox .eyes{
     left: 90%;
     font-size: 16px;
     cursor: pointer;
