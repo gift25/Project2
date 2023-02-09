@@ -1,0 +1,118 @@
+@import url('href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />');
+body
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+.contanier
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contanier .box
+{
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px;
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+}
+.contanier .box::before
+{
+    content: ' ';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,.2);
+    z-index: 2;
+    pointer-events: none;
+}
+.contanier .box .icon
+{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 1s;
+}
+.contanier .box:nth-child(1) .icon
+{
+    box-shadow: 0 0 0 0 #ec82a6;
+    background-color: #ec82a6;
+}
+.contanier .box:nth-child(1):hover .icon
+{
+    box-shadow: 0 0 0 400px #ec82a6;
+}
+.contanier .box:nth-child(2) .icon
+{
+    box-shadow: 0 0 0 0 #d17f8a;
+    background-color: #d17f8a;
+}
+.contanier .box:nth-child(2):hover .icon
+{
+    box-shadow: 0 0 0 400px #d17f8a;
+}
+.contanier .box:nth-child(3) .icon
+{
+    box-shadow: 0 0 0 0 #d694df;
+    background-color: #d694df;
+}
+.contanier .box:nth-child(3):hover .icon
+{
+    box-shadow: 0 0 0 400px #d694df;
+}
+.contanier .box .content
+{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+.contanier .box:hover .content
+{
+    color: #fff;
+}
+.contanier .box .content h3
+{
+    font-size: 20px;
+    margin: 10px o;
+    padding: 0;
+}
+.contanier .box .content p
+{
+    margin: 0;
+    padding: 0;
+}
+a
+{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
