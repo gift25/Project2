@@ -2,6 +2,7 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const sessions = require('express-session');
+const mongoose = require('mongoose')
 
 // Initial express app
 const app = express();
@@ -33,6 +34,17 @@ const mypassword = '12345'
 // a variable to save a session
 var session;
 
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb+srv://gift:gift250945@clusterlogin.hizeb7s.mongodb.net/?retryWrites=true&w=majority')
+
+    .then(()=>{
+        
+        console.log('Connected to MongoDB') 
+         
+    }).catch(err=>{
+        console.log('Cannot Connect to MongoDB') 
+        process.exit();
+    })
 
 
 // page => Welcome
@@ -51,6 +63,7 @@ app.post('/user', (req, res) => {
         session.userid = req.body.username;
         console.log(req.session)
         res.sendFile("Project2-main/index.html", {root: __dirname});
+        res.sendFile("Project2-main/haeds.html", {root: __dirname});
     }
     else{
         res.send('Invalid username or password');
