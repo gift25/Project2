@@ -4,6 +4,8 @@ const cookieParser = require('cookie-parser');
 const sessions = require('express-session');
 const mongoose = require('mongoose')
 
+
+
 // Initial express app
 const app = express();
 const PORT = 3000;
