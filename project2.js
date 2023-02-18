@@ -1,12 +1,14 @@
 // Import library
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 const sessions = require('express-session');
 const mongoose = require('mongoose')
 
 
 
 // Initial express app
+const cors = require('cors')
 const app = express();
 const PORT = 3000;
 
@@ -37,7 +39,7 @@ const mypassword = '12345'
 var session;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://gift:gift250945@clusterlogin.hizeb7s.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://gift:gift250945@clusterlogin.hizeb7s.mongodb.net/?retryWrites=true&w=majority/explorer/OudDB/product/find')
 
     .then(()=>{
         
@@ -65,7 +67,7 @@ app.post('/user', (req, res) => {
         session.userid = req.body.username;
         console.log(req.session)
         res.sendFile("Project2-main/index.html", {root: __dirname});
-        res.sendFile("Project2-main/haeds.html", {root: __dirname});
+        // res.sendFile("Project2-main/haeds.html", {root: __dirname});
     }
     else{
         res.send('Invalid username or password');

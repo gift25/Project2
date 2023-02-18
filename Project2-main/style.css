@@ -52,6 +52,7 @@ form .textbox i{
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
+
 }
 form .textbox .eyes{
     left: 90%;
@@ -100,6 +101,7 @@ form .spn-regs{
 form .spn-regs a{
     color: #8e1df7;
     text-decoration: none;
+    
 }
 form .spn-regs:hover a {
     text-decoration: underline;
