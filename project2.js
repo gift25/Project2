@@ -68,6 +68,7 @@ app.post('/user', (req, res) => {
         console.log(req.session)
         res.sendFile("Project2-main/index.html", {root: __dirname});
         // res.sendFile("Project2-main/haeds.html", {root: __dirname});
+        // res.sendFile("Project2-main/register.html",{root: __dirname});
     }
     else{
         res.send('Invalid username or password');
