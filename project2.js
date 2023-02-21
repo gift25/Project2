@@ -60,6 +60,22 @@ app.get('/', (req, res) => {
     res.sendFile("Project2-main/index.html", {root: __dirname})
 });
 
+app.get('/register', (req, res) => {
+    session = req.session;
+    if(session.userid){
+        res.send("Welcome User <a href=\'/logout'>Logout</a>");
+    }else
+    res.sendFile("Project2-main/register.html", {root: __dirname})
+});
+
+app.get('/haeds', (req, res) => {
+    session = req.session;
+    if(session.userid){
+        res.send("Welcome User <a href=\'/logout'>Logout</a>");
+    }else
+    res.sendFile("Project2-main/haeds.html", {root: __dirname})
+});
+
 // page => User
 app.post('/user', (req, res) => {
     if(req.body.username == myusername && req.body.password == mypassword){

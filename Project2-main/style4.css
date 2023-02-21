@@ -1,0 +1,43 @@
+.col-sm-5 .no-margin-top mb20 h3{
+    font-size: 50px;
+    margin-bottom: 50px;
+
+}
+
+
+
+form .form-group{
+    width: 20px;
+    margin: auto;
+    height: 60px;
+    right: 220px;
+    margin-bottom: 30px;
+    border-radius: 50px;
+    position: relative;
+}
+
+form .form-group input{
+    width: 450px;
+    height: 70px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    padding: 20px 70px;
+    font-size: 18px;
+    justify-content: center;
+    box-shadow: 20px 20px 20px #8e1df720,
+    -10px -10px 20px #8e1df720;
+}
+
+form .btn{
+    color: #ffff;
+    font-size: 20px;
+    width: 250px;
+    margin: auto;
+    background: linear-gradient(170deg,#8e1df7,#19025e);
+    padding: 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 20px;
+}
