@@ -1,0 +1,39 @@
+<div class="widget-post" aria-labelledby="post-header-title">
+    <div class="widget-post__header">
+      <h2 class="widget-post__title" id="post-header-title">
+        <link rel="stylesheet" href="/Project2-main/style9.css">
+        <!-- <link rel="stylesheet" type="text/css" href="style9.css"> -->
+         <i class="fa fa-pencil" aria-hidden="true"></i>
+        Write Me
+      </h2>
+    </div>
+    <form id="widget-form" class="widget-post__form" name="form" aria-label="post widget">
+      <div class="widget-post__content">
+        <label for="post-content" class="sr-only">Share</label>
+        <textarea name="post" id="post-content" class="widget-post__textarea scroller" placeholder="พิมอะไรสักอย่าง?"></textarea>
+      </div>
+      <div class="widget-post__options is--hidden" id="stock-options">
+      </div>
+      <div class="widget-post__actions post--actions">
+        <div class="post-actions__attachments">
+          <button type="button" class="btn post-actions__upload attachments--btn">
+            <label for="upload-file" class="post-actions__label">
+               <i class="fa fa-upload" aria-hidden="true"></i> 
+              upload File
+            </label>
+          </button>
+          <button type="button" class="btn post-actions__upload attachments--btn">
+            <label for="upload-image" class="post-actions__label">
+               <i class="fa fa-upload" aria-hidden="true"></i> 
+              upload image
+            </label>
+          </button>
+          <input type="file" id="upload-image" accept="image/*" multiple>
+          <input type="file" id="upload-file" accept="file/*" multiple>
+        </div>
+        <div class="post-actions__widget">
+          <button class="btn post-actions__publish">publish</button>
+        </div>
+      </div>
+    </form>
+  </div>

@@ -76,6 +76,31 @@ app.get('/haeds', (req, res) => {
     res.sendFile("Project2-main/haeds.html", {root: __dirname})
 });
 
+app.get('/joinclass', (req, res) => {
+    session = req.session;
+    if(session.userid){
+        res.send("Welcome User <a href=\'/logout'>Logout</a>");
+    }else
+    res.sendFile("Project2-main/joinclass.html", {root: __dirname})
+});
+
+app.get('/classtabels', (req, res) => {
+    session = req.session;
+    if(session.userid){
+        res.send("Welcome User <a href=\'/logout'>Logout</a>");
+    }else
+    res.sendFile("Project2-main/classtabels.html", {root: __dirname})
+});
+
+app.get('/post', (req, res) => {
+    session = req.session;
+    if(session.userid){
+        res.send("Welcome User <a href=\'/logout'>Logout</a>");
+    }else
+    res.sendFile("Project2-main/post.html", {root: __dirname})
+});
+
+
 // page => User
 app.post('/user', (req, res) => {
     if(req.body.username == myusername && req.body.password == mypassword){
@@ -83,8 +108,7 @@ app.post('/user', (req, res) => {
         session.userid = req.body.username;
         console.log(req.session)
         res.sendFile("Project2-main/index.html", {root: __dirname});
-        // res.sendFile("Project2-main/haeds.html", {root: __dirname});
-        // res.sendFile("Project2-main/register.html",{root: __dirname});
+
     }
     else{
         res.send('Invalid username or password');
