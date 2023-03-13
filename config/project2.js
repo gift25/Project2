@@ -39,7 +39,7 @@ const mypassword = '12345'
 var session;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://gift:gift250945@clusterlogin.hizeb7s.mongodb.net/?retryWrites=true&w=majority/explorer/OudDB/product/find')
+mongoose.connect('mongodb+srv://gift:gift250945@clusterlogin.hizeb7s.mongodb.net/?retryWrites=true&w=majority')
 
     .then(()=>{
         
@@ -53,6 +53,14 @@ mongoose.connect('mongodb+srv://gift:gift250945@clusterlogin.hizeb7s.mongodb.net
 
 // page => Welcome
 app.get('/', (req, res) => {
+    session = req.session;
+    if(session.userid){
+        res.send("Welcome User <a href=\'/logout'>Logout</a>");
+    }else
+    res.sendFile("Project2-main/index.html", {root: __dirname})
+});
+
+app.get('/index', (req, res) => {
     session = req.session;
     if(session.userid){
         res.send("Welcome User <a href=\'/logout'>Logout</a>");
@@ -92,12 +100,20 @@ app.get('/classtabels', (req, res) => {
     res.sendFile("Project2-main/classtabels.html", {root: __dirname})
 });
 
-app.get('/post', (req, res) => {
+app.get('/testpost', (req, res) => {
     session = req.session;
     if(session.userid){
         res.send("Welcome User <a href=\'/logout'>Logout</a>");
     }else
-    res.sendFile("Project2-main/post.html", {root: __dirname})
+    res.sendFile("Project2-main/testpost.html", {root: __dirname})
+});
+
+app.get('/Fileupload', (req, res) => {
+    session = req.session;
+    if(session.userid){
+        res.send("Welcome User <a href=\'/logout'>Logout</a>");
+    }else
+    res.sendFile("Project2-main/Fileupload.html", {root: __dirname})
 });
 
 
